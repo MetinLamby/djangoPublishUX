@@ -1,0 +1,57 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo"><h2>PublishUX</h2></div>
+    <div class="linklist">
+      <p class="linklistitem">Home</p>
+      <p class="linklistitem">Benefit</p>
+      <p class="linklistitem">Solution</p>
+      <p class="linklistitem">Get Started</p>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-txt">
+      <h1 class="banner-txt-header">ESG related articles that matter</h1>
+      <p class="banner-txt-para">We support financial publications in selecting the most ESG relevant articles that have the biggest impact on investments</p>
+      <div class="btns">
+        <div class="btn-discover">
+          <p class="btn-text" style="color: white;">Discover our solution</p>
+        </div>
+        <div class="btn-upload">
+          <p class="btn-text">Upload Files</p>
+        </div>
+      </div>
+    </div>
+    <div class="banner-img">
+      <img src="{% static 'images/banner-img.png' %}" alt="" class="banner-img">
+    </div>
+  </div>
+
+  <div class="customers">
+    <p class="customeritem">Wall Street Journal</p>
+    <p class="customeritem">Financial Times</p>
+    <p class="customeritem">Frankfurter Allgemeine</p>
+    <p class="customeritem">Handelsblatt</p>
+  </div>
+
+    {% block main %}
+    {% endblock %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
