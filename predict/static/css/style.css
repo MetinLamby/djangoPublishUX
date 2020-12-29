@@ -8,10 +8,6 @@
   position: sticky;
 }
 
-.logo {
-
-}
-
 .linklist {
   display: flex;
   align-items: center;
@@ -28,7 +24,6 @@
 .banner {
   height: 75vh;
   display: flex;
-  width: 100vw;
 }
 
 .banner-txt {
@@ -99,7 +94,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100vw;
   height: 100px;
 }
 
@@ -108,3 +102,122 @@
   color: #8C8C8C;
   font-weight: bold;
 }
+
+.solution-outter {
+  margin-top: 60px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.solutions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.solution-header{
+  font-weight: bold;
+  line-height: 45px;
+  margin-bottom: 0px;
+}
+
+.solution-header-two {
+  margin-bottom: 8px;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.column-text {
+  padding: 50px;
+}
+
+.column-solution-img{
+  height: 200px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.solution-column-header {
+  text-align: center;
+}
+
+.solutions-column-p {
+  text-align: center;
+}
+
+.quote-div {
+  height: 45vh;
+  background-color: #FFE7E9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.quote-div-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  border: none !important;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-text {
+  padding: 50px;
+}
+
+.column-card-img {
+  height: auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.cards{
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer .fa-heart {
+  color: #D23333;
+}
+

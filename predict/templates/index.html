@@ -47,11 +47,109 @@
     <p class="customeritem">Handelsblatt</p>
   </div>
 
-    {% block main %}
-    {% endblock %}
+  <div class="container solution-outter">
+    <div class="solutions">
+      <h1 class="solution-header">Our Solution,</h1>
+      <h1 class="solution-header solution-header-two">Your Benefit</h1>
+      <p>A product for financial publications</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" style="margin-bottom: 50px;">
+      <div class="col-sm column">
+        <img src="{% static 'images/sort-django.png' %}" alt="" class="column-solution-img">
+        <div class="column-text">
+          <h5 class="solution-column-header">ESG relevance</h5>
+          <p class="solutions-column-p">We rank your articles in terms of ESG relevance and investment impact</p>
+        </div>
+      </div>
+      <div class="col-sm column">
+        <img src="{% static 'images/phone-django.png' %}" alt="" class="column-solution-img">
+        <div class="column-text">
+          <h5 class="solution-column-header">Better UX</h5>
+          <p class="solutions-column-p">Highlighting the most impactful articles incrases the UX of financial publication services</p>
+        </div>
+      </div>
+      <div class="col-sm column">
+        <img src="{% static 'images/direction-django.png' %}" alt="" class="column-solution-img">
+        <div class="column-text">
+          <h5 class="solution-column-header">Impact</h5>
+          <p class="solutions-column-p">Steer market’s attention in the right direction creating focus on relevant and impactful insights</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-div">
+    <div class="quote-div-inner">
+      <h2 style="text-align: center; width: 60%">PublishUX helped us increase our conversion rates, average time on service and number of visitors.</h2>
+      <p style="text-align: center; width: 60%">- Peter Frankopan, Financial Times Editor</p>
+    </div>
+  </div>
+
+  <div class="container solution-outter">
+    <div class="solutions">
+      <h1 class="solution-header">How it works</h1>
+      <p>Drag & Drop - we take care of the rest</p>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card card-img">
+      <img src="{% static 'images/upload-django.png' %}" alt="" class="column-card-img">
+    </div>
+    <div class="card card-text">
+      <h2 style="font-weight: bold;">You Upload Your Articles</h2>
+      <p>Drag & Drop all the articles that you want to be ranked in terms of ESG relevance and impact. All files must be in PDF format. You can upload as many files as you want.</p>
+      <div class="btn-discover">
+        <p class="btn-text" style="color: white;">Upload Articles</p>
+      </div>
+    </div>
+    <div class="card card-text">
+      <h2 style="font-weight: bold;">You Upload Your Articles</h2>
+      <p>We will use our specific Machine Learning model that we have trained with thousands of articles and their respective ESG relevance to sort your articles for you. The most ESG relevant and impactful articles will be easy for you to spot at the top of the ranking.</p>
+      <div class="btn-discover">
+        <p class="btn-text" style="color: white;">Get Started</p>
+      </div>
+    </div>
+    <div class="card card-img">
+      <img src="{% static 'images/network-django.png' %}" alt="" class="column-card-img">
+    </div>
+    <div class="card card-img">
+      <img src="{% static 'images/dashboard-django.png' %}" alt="" class="column-card-img">
+    </div>
+    <div class="card card-text">
+      <h2 style="font-weight: bold;">You Upload Your Articles</h2>
+      <p>With our Machine Learning model we provide an analysis of the impact and relavence of your article in terms of ESG. We also provide a comparison of the impact of your article and other articles written about the same topic. Finally, you can see a summary of your article, the polarity, the key word as well as the ESG criteria that the article is considering.</p>
+      <div class="btn-discover">
+        <p class="btn-text" style="color: white;">Get Started</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container solution-outter">
+    <div class="solutions">
+      <h1 class="solution-header">Upload your articles</h1>
+      <p>Files should be in PDF format</p>
+    </div>
+  </div>
+
+  {% block main %}
+  {% endblock %}
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="footer-copyright">
+      PublishUX made with ❤ at AiTalents
+    </div>
+  </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
