@@ -27,7 +27,7 @@ SECRET_KEY = '-1moh_n2ujc=mge_=2^1a%j&2g3_r9m2q+422k5$(1^jup)y=w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['frozen-shelf-05239.herokuapp.com']
 
 
 # Application definition
