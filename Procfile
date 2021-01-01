@@ -1,1 +1,1 @@
-web:gunicorn djangoFrontend.wsgi
+web: gunicorn djangoFrontend.wsgi
