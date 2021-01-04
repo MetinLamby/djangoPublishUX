@@ -13,29 +13,21 @@ def predict_chances(request):
     if request.POST.get('action') == 'post':
 
         # Receive data from client
-        sepal_length = float(request.POST.get('sepal_length'))
-        sepal_width = float(request.POST.get('sepal_width'))
-        petal_length = float(request.POST.get('petal_length'))
-        petal_width = float(request.POST.get('petal_width'))
+        title = request.POST.get('title')
+        body = request.POST.get('body')
 
         # Unpickle model
-        model = pd.read_pickle('predict/new_model_two.pickle')
+        #model = pd.read_pickle('predict/new_model_two.pickle')
         # Make prediction
-        result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
+        #result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
 
-        classification = result
-
-        if classification[0] == 0:
-          classification = 'Iris-setosa'
-        elif classification[0] == 1:
-          classification = 'Iris-versicolor'
-        else:
-          classification = 'Iris-virginica'
+        #classification = result
+        classification = 9
 
         ##PredResults.objects.create(sepal_length=sepal_length, sepal_width=sepal_width, petal_length=petal_length,
                                    #petal_width=petal_width, classification=classification)
 
-        return JsonResponse({'result': classification, 'sepal_length': sepal_length, 'sepal_width': sepal_width, 'petal_length': petal_length, 'petal_width': petal_width}, safe=False)
+        return JsonResponse({'result': classification, 'title': title, 'body': body}, safe=False)
 
 
 #def view_results(request):

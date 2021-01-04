@@ -12,13 +12,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="navbar">
+  <div class="navbar" id="navbar">
     <div class="logo"><h2>PublishUX</h2></div>
     <div class="linklist">
-      <p class="linklistitem">Home</p>
-      <p class="linklistitem">Benefit</p>
-      <p class="linklistitem">Solution</p>
-      <p class="linklistitem">Get Started</p>
+      <p class="linklistitem"><a href="#navbar" class="link">Home</a></p>
+      <p class="linklistitem"><a href="#benefit" class="link">Benefit</a></p>
+      <p class="linklistitem"><a href="#solution" class="link">Solution</a></p>
+      <p class="linklistitem"><a href="#getstarted" class="link">Get Started</a></p>
     </div>
   </div>
 
@@ -28,10 +28,10 @@
       <p class="banner-txt-para">We support financial publications in selecting the most ESG relevant articles that have the biggest impact on investments</p>
       <div class="btns">
         <div class="btn-discover">
-          <p class="btn-text" style="color: white;">Discover our solution</p>
+          <p class="btn-text" style="color: white;"><a href="#benefit" class="linkTwo">Discover our solution</a></p>
         </div>
         <div class="btn-upload">
-          <p class="btn-text">Upload Files</p>
+          <p class="btn-text"><a href="#getstarted" class="link">Upload article</a></p>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
     <p class="customeritem">Handelsblatt</p>
   </div>
 
-  <div class="container solution-outter">
+  <div class="container solution-outter" id="benefit">
     <div class="solutions">
       <h1 class="solution-header">Our Solution,</h1>
       <h1 class="solution-header solution-header-two">Your Benefit</h1>
@@ -88,7 +88,7 @@
     </div>
   </div>
 
-  <div class="container solution-outter">
+  <div class="container solution-outter" id="solution">
     <div class="solutions">
       <h1 class="solution-header">How it works</h1>
       <p>Drag & Drop - we take care of the rest</p>
@@ -103,14 +103,14 @@
       <h2 style="font-weight: bold;">You Upload Your Articles</h2>
       <p>Drag & Drop all the articles that you want to be ranked in terms of ESG relevance and impact. All files must be in PDF format. You can upload as many files as you want.</p>
       <div class="btn-discover">
-        <p class="btn-text" style="color: white;">Upload Articles</p>
+        <p class="btn-text" style="color: white;"><a href="#getstarted" class="linkTwo">Upload Article</a></p>
       </div>
     </div>
     <div class="card card-text">
       <h2 style="font-weight: bold;">You Upload Your Articles</h2>
       <p>We will use our specific Machine Learning model that we have trained with thousands of articles and their respective ESG relevance to sort your articles for you. The most ESG relevant and impactful articles will be easy for you to spot at the top of the ranking.</p>
       <div class="btn-discover">
-        <p class="btn-text" style="color: white;">Get Started</p>
+        <p class="btn-text" style="color: white;"><a href="#getstarted" class="linkTwo">Get Started</a></p>
       </div>
     </div>
     <div class="card card-img">
@@ -123,18 +123,19 @@
       <h2 style="font-weight: bold;">You Upload Your Articles</h2>
       <p>With our Machine Learning model we provide an analysis of the impact and relavence of your article in terms of ESG. We also provide a comparison of the impact of your article and other articles written about the same topic. Finally, you can see a summary of your article, the polarity, the key word as well as the ESG criteria that the article is considering.</p>
       <div class="btn-discover">
-        <p class="btn-text" style="color: white;">Get Started</p>
+        <p class="btn-text" style="color: white;"><a href="#getstarted" class="linkTwo">Get Started</a></p>
       </div>
     </div>
   </div>
 
   <div class="container solution-outter">
     <div class="solutions">
-      <h1 class="solution-header">Upload your articles</h1>
+      <h1 class="solution-header">Upload your Article</h1>
       <p>Files should be in PDF format</p>
     </div>
   </div>
 
+  <div id="getstarted"></div>
   {% block main %}
   {% endblock %}
 

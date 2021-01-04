@@ -1,3 +1,15 @@
+a {
+  text-decoration: none !important;
+}
+
+.link {
+  color: black !important;
+}
+
+.linkTwo {
+  color: white !important;
+}
+
 .navbar {
   height: 80px;
   display: flex;
@@ -12,12 +24,20 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  color: black !important;
 }
 
 .linklistitem {
   margin-right: 30px;
   margin-top: 0px;
   margin-bottom: 0px !important;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.linklistitem:hover {
+  transform: scale(1.1);
 }
 
 
@@ -66,6 +86,9 @@
   background: #FD1015;
   border-radius: 5px;
   margin-right: 20px;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
 }
 
 .btn-upload {
@@ -77,6 +100,17 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.btn-upload:hover {
+  transform: scale(1.03);
+}
+
+.btn-discover:hover {
+  transform: scale(1.03);
 }
 
 .btn-text {
@@ -205,6 +239,7 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
+  margin-top: 100px;
 }
 .footer-links {
   display: flex;
@@ -221,3 +256,101 @@
   color: #D23333;
 }
 
+.form-background {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-background-inner {
+  height: 100%;
+  background: rgba(255, 231, 233, 0.65);
+  width: 50%;
+  border: 1.5px dashed #FD1015;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-submit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 44px;
+  left: 467px;
+  top: 3366px;
+
+  background: #FD1015;
+  border-radius: 5px;
+  color: white;
+  border: none;
+
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.btn-submit-form:hover {
+  transform: scale(1.02);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+#small-close-btn{
+  background: #FD1015;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  height: 25px;
+  width: 25px;
+  font-size: 15px;
+}
+
+.modal-dialog {
+  max-width: 900px;
+  min-width: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.statshalf {
+  margin-right: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.texthalf {
+  margin-left: 10px;
+  width: 50%;
+}
+
+.btn-score {
+  width: 130px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #FD1015;
+  border-radius: 5px;
+}
+
+.progress {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #FD1015 !important;
+}

@@ -2,31 +2,72 @@
 
 {% block main %}
 <!-- Modal -->
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
+
+
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Prediction Results</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h5 class="modal-title" id="exampleModalLabel"><span id="titleRepeat"></span></h5>
+                <button type="button" class="close" id="small-close-btn" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+
+
             <div class="modal-body">
+              <div class="statshalf">
+                <p style="font-weight: bold; margin-bottom: 0;">ESG Impact and Relevance of your article</p>
+                <p>(Articles are rated out of 3)</p>
+                <div class="btn-score">
+                  <p class="btn-text" style="color: white;" id="prediction"></p>
+                </div>
+
+                <p style="margin-top: 30px; font-weight: bold;">ESG Impact compared to other articles</p>
+                <p>Other Articles Average - 6.9 </p>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+
+                <div style="display: flex;">
+                  <pre>Your Article - </pre>
+                  <p id="predictionTwo"></p>
+                </div>
+
+                <div class="progress">
+                  <div class="progress-bar" id="flexibar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+
+              <div class="texthalf">
+                <p style="font-weight: bold;">Summary of the article</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus dolor incidunt maiores totam, consectetur magnam ratione tempore saepe esse porro hic corrupti accusantium soluta aperiam dolorem, velit, obcaecati labore accusamus!</p>
+              </div>
+              <!--
                 <h5>Prediction Input:</h5>
-                <div>Sepal Length: <span id="sl"></span></div>
-                <div>Sepal Width: <span id="sw"></span></div>
-                <div>Petal Length: <span id="pl"></span></div>
-                <div>Petal width: <span id="pw"></span></div>
+                <div>Title: <span id="titleRepeat"></span></div>
+                <div>Body: <span id="bodyRepeat"></span></div>
                 <h5 class="pt-3">Prediction Classification:</h5>
                 <div id="prediction"></div>
+              -->
             </div>
+
+
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" style="background-color: #FD1015" data-dismiss="modal">Close</button>
+                <button type="button" class="btn-submit-form" data-dismiss="modal">Close</button>
             </div>
+
+
         </div>
     </div>
 </div>
 
+
+
+<!--
 <div class="container pt-5" style="height: 70vh;">
     <div class="row justify-content-md-center">
         <div class="col-md-4">
@@ -54,6 +95,43 @@
         </div>
     </div>
 </div>
+-->
+
+
+
+<div class="form-background">
+  <div class="form-background-inner">
+    <div>
+            <h1>ESG Impact Prediction</h1>
+            <form action="" id="post-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="title">Article Title</label>
+                    <input type="text" class="form-control" id="title" placeholder="" required>
+                </div>
+
+
+                <div class="form-group">
+                  <label for="body">Article Body</label>
+                  <textarea class="form-control" id="body" required></textarea>
+                </div>
+
+              <!--
+                <div class="form-group">
+                    <label for="body">Article Body</label>
+                    <input type="number" step="0.1" class="form-control" id="body" placeholder="" required>
+                </div>
+              -->
+                <button type="submit" value="Submit" class="btn-submit-form" style="background-color: #FD1015; margin-top: 15px;"data-toggle="modal" data-target="#exampleModal">Submit</button>
+            </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
 <script>
     $(document).on('submit', '#post-form',function(e){
@@ -62,20 +140,20 @@
             type:'POST',
             url:'{% url "predict:submit_prediction" %}',
             data:{
-                sepal_length:$('#sepal_length').val(),
-                sepal_width:$('#sepal_width').val(),
-                petal_length:$('#petal_length').val(),
-                petal_width:$('#petal_width').val(),
+                title:$('#title').val(),
+                body:$('#body').val(),
                 csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
                 action: 'post'
             },
+
+
             success:function(json) {
                 document.forms["post-form"].reset();
                 document.getElementById("prediction").innerHTML = json['result']
-                document.getElementById("sl").innerHTML = json['sepal_length']
-                document.getElementById("sw").innerHTML = json['sepal_width']
-                document.getElementById("pl").innerHTML = json['petal_length']
-                document.getElementById("pw").innerHTML = json['petal_width']
+                document.getElementById("predictionTwo").innerHTML = json['result']
+                document.getElementById("flexibar").style.width = json['result'] + "0%";
+                document.getElementById("titleRepeat").innerHTML = json['title']
+                document.getElementById("bodyRepeat").innerHTML = json['body']
             },
             error : function(xhr,errmsg,err) {
 
