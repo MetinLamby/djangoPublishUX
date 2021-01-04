@@ -12,25 +12,21 @@ def predict_chances(request):
 
     if request.POST.get('action') == 'post':
 
-        # Receive data from client
+        ## Receive data from client
         title = request.POST.get('title')
         body = request.POST.get('body')
 
-        # Unpickle model
-        #model = pd.read_pickle('predict/new_model_two.pickle')
-        # Make prediction
-        #result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
+        ## First we need to unpickle the model
+        ## the pickled model should be placed here 'predict/MODEL_NAME.pickle'
+        ## code line 23 model = ... should initialize the model
 
-        #classification = result
-        classification = 9
-
-        ##PredResults.objects.create(sepal_length=sepal_length, sepal_width=sepal_width, petal_length=petal_length,
-                                   #petal_width=petal_width, classification=classification)
-
-        return JsonResponse({'result': classification, 'title': title, 'body': body}, safe=False)
+        # model = pd.read_pickle('predict/new_model_two.pickle')
 
 
-#def view_results(request):
-    # Submit prediction and show all
-    #data = {"dataset": PredResults.objects.all()}
-    #return render(request, "results.html", data)
+        ## after having initialized the model we will make a predictionMake prediction using the parameters received from JS (see above)
+
+        # result = model.predict(title, body)
+
+        ## the result, title, and body parameters will then be sent to another page using JS again
+        return JsonResponse({'result': result, 'title': title, 'body': body}, safe=False)
+
