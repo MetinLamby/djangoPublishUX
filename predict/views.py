@@ -25,7 +25,7 @@ def predict_chances(request):
 
         ## after having initialized the model we will make a predictionMake prediction using the parameters received from JS (see above)
 
-        # result = model.predict(title, body)
+        result = 80.37
 
         ## the result, title, and body parameters will then be sent to another page using JS again
         return JsonResponse({'result': result, 'title': title, 'body': body}, safe=False)
