@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,6 +21,8 @@
       <p class="linklistitem"><a href="#benefit" class="link">Benefit</a></p>
       <p class="linklistitem"><a href="#solution" class="link">Solution</a></p>
       <p class="linklistitem"><a href="#getstarted" class="link">Get Started</a></p>
+      <p class="linklistitem"><a href="https://colab.research.google.com/drive/1k3MaICDKbwQP9YWDBad3lcxwpE6HJpTm#scrollTo=0O90P5NeNyTY" class="link">Our Model</a></p>
+      <p class="linklistitem" style="font-size: 25px;"><a href="https://github.com/MetinLamby/djangoPublishUX" class="link"><i class="fab fa-github"></i></a></p>
     </div>
   </div>
 
@@ -97,30 +100,30 @@
   </div>
 
   <div class="cards">
-    <div class="card card-img" data-aos="fade-right">
+    <div class="card card-img" data-aos="fade-up">
       <img src="{% static 'images/upload-django.png' %}" alt="" class="column-card-img">
     </div>
-    <div class="card card-text" data-aos="fade-left">
+    <div class="card card-text" data-aos="fade-up">
       <h2 style="font-weight: bold;">You Upload Your Articles</h2>
       <p>Drag & Drop all the articles that you want to be ranked in terms of ESG relevance and impact. All files must be in PDF format. You can upload as many files as you want.</p>
       <div class="btn-discover">
         <p class="btn-text" style="color: white;"><a href="#getstarted" class="linkTwo">Upload Article</a></p>
       </div>
     </div>
-    <div class="card card-text" data-aos="fade-right">
+    <div class="card card-text" data-aos="fade-up">
       <h2 style="font-weight: bold;">You Upload Your Articles</h2>
       <p>We will use our specific Machine Learning model that we have trained with thousands of articles and their respective ESG relevance to sort your articles for you. The most ESG relevant and impactful articles will be easy for you to spot at the top of the ranking.</p>
       <div class="btn-discover">
         <p class="btn-text" style="color: white;"><a href="#getstarted" class="linkTwo">Get Started</a></p>
       </div>
     </div>
-    <div class="card card-img" data-aos="fade-left">
+    <div class="card card-img" data-aos="fade-up">
       <img src="{% static 'images/network-django.png' %}" alt="" class="column-card-img">
     </div>
-    <div class="card card-img" data-aos="fade-right">
+    <div class="card card-img" data-aos="fade-up">
       <img src="{% static 'images/dashboard-django.png' %}" alt="" class="column-card-img">
     </div>
-    <div class="card card-text" data-aos="fade-left">
+    <div class="card card-text" data-aos="fade-up">
       <h2 style="font-weight: bold;">You Upload Your Articles</h2>
       <p>With our Machine Learning model we provide an analysis of the impact and relavence of your article in terms of ESG. We also provide a comparison of the impact of your article and other articles written about the same topic. Finally, you can see a summary of your article, the polarity, the key word as well as the ESG criteria that the article is considering.</p>
       <div class="btn-discover">
@@ -131,8 +134,8 @@
 
   <div class="container solution-outter">
     <div class="solutions">
-      <h1 class="solution-header">Upload your Article</h1>
-      <p>Files should be in PDF format</p>
+      <h1 class="solution-header">Upload Your Article Demo</h1>
+      <p>Copy and paste your article below</p>
     </div>
   </div>
 
@@ -140,9 +143,17 @@
   {% block main %}
   {% endblock %}
 
+  <div style="height: 170px; display: flex;
+  align-items: center;
+  justify-content: space-around;">
+    <div class="btn-discover btn-colab">
+    <p class="btn-text" style="color: white;"><a href="https://colab.research.google.com/drive/1k3MaICDKbwQP9YWDBad3lcxwpE6HJpTm#scrollTo=0O90P5NeNyTY" class="linkTwo">Test our Model on Colab</a></p>
+  </div>
+  </div>
+
   <div class="footer">
     <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/MetinLamby/djangoPublishUX"><i class="fab fa-github"></i></a>
     </div>
     <div class="footer-copyright">
       PublishUX made with ❤ at AiTalents
