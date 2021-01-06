@@ -24,11 +24,13 @@ def predict_chances(request):
         ## code line 23 model = ... should initialize the model
 
         # model = pd.read_pickle('predict/new_model_two.pickle')
+        model = pd.read_pickle('predict/rf.pkl')
+        result = model.predict(body)
 
 
         ## after having initialized the model we will make a predictionMake prediction using the parameters received from JS (see above)
 
-        result = 80.37
+        #result = 80.37
 
         ## the result, title, and body parameters will then be sent to another page using JS again
         return JsonResponse({'result': result, 'title': title, 'body': body}, safe=False)

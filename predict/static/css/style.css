@@ -377,7 +377,6 @@ a {
   justify-content: space-around;
   background: #FD1015;
   border-radius: 5px;
-  margin-right: 20px;
   transition-property: transform;
   transition-duration: 0.1s;
   transition-timing-function: linear;
