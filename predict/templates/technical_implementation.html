@@ -16,18 +16,58 @@
   <div class="navbar" id="navbar">
     <div class="logo"><h2>PublishUX</h2></div>
     <div class="linklist">
-      <p class="linklistitem"><a href="#navbar" class="link">Home</a></p>
-      <p class="linklistitem"><a href="#benefit" class="link">Benefit</a></p>
-      <p class="linklistitem"><a href="#solution" class="link">Solution</a></p>
-      <p class="linklistitem"><a href="#getstarted" class="link">Get Started</a></p>
+      <p class="linklistitem"><a href="/" class="link">Home</a></p>
+      <p class="linklistitem"><a href="/" class="link">Benefit</a></p>
+      <p class="linklistitem"><a href="/" class="link">Solution</a></p>
+      <p class="linklistitem" style="border-right: 1px solid grey"><a href="/" class="link" style="padding-right: 25px;">Get Started</a></p>
       <p class="linklistitem"><a href="technical_implementation" class="link">Technical Implementation</a></p>
       <p class="linklistitem"><a href="https://colab.research.google.com/drive/1k3MaICDKbwQP9YWDBad3lcxwpE6HJpTm#scrollTo=0O90P5NeNyTY" class="link">Our Model</a></p>
       <p class="linklistitem" style="font-size: 25px;"><a href="https://github.com/MetinLamby/djangoPublishUX" class="link"><i class="fab fa-github"></i></a></p>
     </div>
   </div>
 
+<div style="margin: 90px;">
 <h1 style="margin-top: 100px;">Technical Implementation of Django Application</h1>
-
+<h6>For detailed django code review, please click <a href="https://github.com/MetinLamby/djangoPublishUX">here</a></h6>
+<ul>
+  <li>Create new project</li>
+  <ul>
+    <li>Push the project to GitHub</li>
+  </ul>
+  <li>Create new app</li>
+  <li>Setup the app urls</li>
+  <ul>
+    <li>landing page - index page</li>
+    <li>technical_implementation page - current page</li>
+    <li>"predict/" url - responsible for sending the user input to the view using AJAX</li>
+  </ul>
+  <li>Build templates</li>
+  <ul>
+    <li>index.html - landing page html</li>
+    <ul>
+      <li>link to css stylesheet</li>
+      <li>link to fontawesome library providing the Github icon in navbar and footer</li>
+      <li>link to library enabling UX fading feature when scrolling on landing page</li>
+      <li>includes the link to our colab model</li>
+    </ul>
+    <li>technical_implementation.html - current page</li>
+    <li>predict.html</li>
+    <ul>
+      <li>providing the user input form in the landing page</li>
+      <li>provides the modal showing the model results when submitting input variables</li>
+      <li>includes JS code to send user input to view</li>
+      <li>includes JS code to receive JSON response from model results</li>
+    </ul>
+    <li>!!! We made a change here from our previous Frontend idea. We decided to drop the dashboard as a separate page and instead add a modal. We made this decision because we were not able to fulfil all our ML model plans and therefore ended up with a completely new UX resulting in new frontend design !!!</li>
+  </ul>
+  <li>Build views</li>
+  <ul>
+    <li>responsible for rendering respective html templates</li>
+    <li>should be responsible for opening the mickled model which we had troule with due to tensorflow-pickle restriction</li>
+  </ul>
+  <li>Deployment to Heroku</li>
+</ul>
+</div>
 
   <div class="footer">
     <div class="footer-links">
