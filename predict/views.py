@@ -30,3 +30,6 @@ def predict_chances(request):
         ## the result, title, and body parameters will then be sent to another page using JS again
         return JsonResponse({'result': result, 'title': title, 'body': body}, safe=False)
 
+
+def technical_implementation(request):
+  return render(request, 'technical_implementation.html')
